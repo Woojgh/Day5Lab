@@ -50,7 +50,7 @@ Test this function by hand in the console to get it working, and when you think 
 function sumAndMultiply(a,b,c){ //eslint-disable-line
   var adder = sum(a, b);
   return sum(adder, c);
-  var multiplied = multiply(a, b);
+    var multiplied = multiply(a, b);
   return multiply(multiplied, c);
 }
 
@@ -72,13 +72,16 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var testArray = [2,3,4]; //eslint-disable-line
 
-function sumArray(testArray){ //eslint-disable-line
-
+function SumArray(testArray){ //eslint-disable-line
+  var quote = "2,3,4 was passed in as an array of numbers, and " + addAll + " is their sum.";
+  var addFirstTwoNumbers = sum(testArray[0], testArray[1]);
+  var addAll = sum(addFirstTwoNumbers, testArray[2]);
+  var allArray = [addAll, quote];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
