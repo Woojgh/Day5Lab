@@ -55,12 +55,11 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
   var addFirst = sum(a, b);
-  var addSecond = sum(addFirst, c);
-  var textSum = a + ' and ' + b + ' and ' + c + ' sum to ' + addSecond;
-  console.log(addSecond);
+  var addSecond = sum(addFirst[0], c);
+  var textSum = a + ' and ' + b + ' and ' + c + ' sum to ' + addSecond[0] +'.';
   var times1 = multiply(a, b);
-  var times2 = multiply(times1, c);
-  var textTimes = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + times2;
+  var times2 = multiply(times1[0],  c);
+  var textTimes = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + times2[0] + '.' ;
   var array = [addSecond, textSum, textTimes];
   return array;
 };
@@ -84,9 +83,9 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-  var addNumbers = sum(testArray[0], testArray[1]);
-  var addAll = sum(addNumbers, testArray[2]);
-  var quote = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + addAll + ' is their sum.'; 
+  var addNumbers = sum(testArray[0],testArray[1]);
+  var addAll = sum(addNumbers[0], testArray[2]);
+  var quote = testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + addAll[0] + ' is their sum.'; 
   var allArray = [addAll, quote];
   return allArray;
 };
@@ -111,8 +110,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 function multiplyArray(testArray){ //eslint-disable-line
   var multiplyFirstTwoNumbers = multiply(testArray[0], testArray[1]);
-  var multiplyAll = multiply(multiplyFirstTwoNumbers, testArray[2]);
-  var quote = 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + multiplyAll + '.';
+  var multiplyAll = multiply(multiplyFirstTwoNumbers[0] , testArray[2]);
+  var quote = 'The numbers ' + testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' have a product of ' + multiplyAll[0] + '.';
   var totalArray = [multiplyAll, quote];
   return totalArray;
 };
